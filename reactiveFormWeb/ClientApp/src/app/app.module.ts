@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { PersonasComponent } from './personas/personas.component';
+import { PersonasService } from './personas/personas.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { PersonasComponent } from './personas/personas.component';
       { path: 'personas', component: PersonasComponent },
     ])
   ],
-  providers: [],
+  providers: [PersonasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

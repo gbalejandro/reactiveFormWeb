@@ -10,7 +10,7 @@ using reactiveFormWeb.Models;
 namespace reactiveFormWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20181028113339_Personas")]
+    [Migration("20181030123809_Personas")]
     partial class Personas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
