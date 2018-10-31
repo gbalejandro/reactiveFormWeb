@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { PersonasComponent } from './personas/personas.component';
 import { PersonasService } from './personas/personas.service';
+import { PersonasFormComponent } from './personas/personas-form/personas-form.component';
 
 @NgModule({
   declarations: [
@@ -19,17 +20,20 @@ import { PersonasService } from './personas/personas.service';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    PersonasComponent
+    PersonasComponent,
+    PersonasFormComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'personas', component: PersonasComponent },
+      { path: 'personas-agregar', component: PersonasFormComponent}
     ])
   ],
   providers: [PersonasService],

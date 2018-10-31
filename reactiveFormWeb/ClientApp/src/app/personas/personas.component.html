@@ -1,6 +1,6 @@
 <h1>Personas</h1>
 
-<button class="btn btn-primary">Agregar Persona</button>
+<button [routerLink]='["/personas-agregar"]' class="btn btn-primary">Agregar Persona</button>
 
 <p *ngIf="!(personas && personas.length)">
   No existen registros para mostrar
