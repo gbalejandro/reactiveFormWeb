@@ -33,7 +33,8 @@ import { PersonasFormComponent } from './personas/personas-form/personas-form.co
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'personas', component: PersonasComponent },
-      { path: 'personas-agregar', component: PersonasFormComponent}
+      { path: 'personas-agregar', component: PersonasFormComponent },
+      { path: 'personas-editar/:id', component: PersonasFormComponent }
     ])
   ],
   providers: [PersonasService],

@@ -13,4 +13,8 @@ export class PersonasService {
   getPersonas(): Observable<IPersona[]> {
     return this.http.get<IPersona[]>(this.apiURL)
   }
+
+  createPersona(persona: IPersona): Observable<IPersona> {
+    return this.http.post<IPersona>(this.apiURL, persona);
+  }
 }

@@ -23,11 +23,7 @@ namespace reactiveFormWeb.Controllers
         [HttpGet]
         public IEnumerable<Persona> GetPersonas()
         {
-            return new List<Persona>()
-            {
-                new Persona() {Id = 1, Nombre = "Felipe Gavilán", FechaNacimiento = new DateTime(1968, 1, 2)},
-                new Persona() {Id = 2, Nombre = "Alejandro González", FechaNacimiento = new DateTime(1969, 7, 2)}
-            };
+            return _context.Personas;
         }
 
         // GET: api/Personas/5
